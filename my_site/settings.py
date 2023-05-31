@@ -22,12 +22,12 @@ load_dotenv(BASE_DIR / '.env')
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "l1s5h%-io2b)u&4__&ms1g=x@b0v+!a!o2z6#sl!t$l45$ah^6"
+SECRET_KEY = '(pr5=hb%zxrh0no&5!^vzxl+##dca)x$-n8j8b^$4k*hgyy3kj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1']
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -123,12 +123,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static"
-# ]
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
 
+MEDIA_ROOT = BASE_DIR / "uploads"
+MEDIA_URL = "/files/"
 
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
-# STATIC_ROOT = BASE_DIR / "/staticfiles/"
-
-# SESSION_COOKIE_AGE = 120000
+SESSION_COOKIE_AGE = 120000
