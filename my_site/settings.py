@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'blog',
+    'core',
     'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
