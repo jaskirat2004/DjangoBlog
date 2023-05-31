@@ -22,7 +22,6 @@ load_dotenv(BASE_DIR / '.env')
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = str(os.getenv('SECRET_KEY'))
 SECRET_KEY = "l1s5h%-io2b)u&4__&ms1g=x@b0v+!a!o2z6#sl!t$l45$ah^6"
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -34,7 +33,6 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'blog',
-    'core',
     'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -125,15 +123,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static"
+# ]
 
-MEDIA_ROOT = BASE_DIR / "uploads"
-MEDIA_URL = "/files/"
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+
+# STATIC_ROOT = BASE_DIR / "/staticfiles/"
 
 # SESSION_COOKIE_AGE = 120000
-
-ENABLE_ORYX_BUILD = True
